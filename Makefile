@@ -9,7 +9,7 @@ ENABLE_AIRCOPY                ?= 0
 ENABLE_FMRADIO                ?= 1
 ENABLE_NOAA                   ?= 0
 ENABLE_VOICE                  ?= 0
-ENABLE_VOX                    ?= 1
+ENABLE_VOX                    ?= 0
 ENABLE_ALARM                  ?= 0
 ENABLE_TX1750                 ?= 0
 ENABLE_PWRON_PASSWORD         ?= 0
@@ -37,7 +37,7 @@ ENABLE_AUDIO_BAR              ?= 1
 ENABLE_COPY_CHAN_TO_VFO       ?= 1
 ENABLE_SPECTRUM               ?= 1
 ENABLE_REDUCE_LOW_MID_TX_POWER?= 0
-ENABLE_BYP_RAW_DEMODULATORS   ?= 0
+ENABLE_BYP_RAW_DEMODULATORS   ?= 1
 ENABLE_BLMIN_TMP_OFF          ?= 0
 ENABLE_SCAN_RANGES            ?= 1
 
@@ -215,6 +215,7 @@ ifeq (, $(VERSION_STRING))
 	VERSION_STRING := NOGIT
 endif
 #VERSION_STRING := 230930b
+VERSION_STRING := v0.22-HICK
 
 
 ASFLAGS = -c -mcpu=cortex-m0
